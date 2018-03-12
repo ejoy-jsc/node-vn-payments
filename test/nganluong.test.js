@@ -38,7 +38,7 @@ describe('NganLuong', () => {
 
 			const redirectUrl = await nganluong.buildCheckoutUrl(checkoutPayload);
 
-			expect(redirectUrl.href).toMatch(
+			expect(redirectUrl.checkout_url).toMatch(
 				/https:\/\/sandbox.nganluong.vn:8088\/nl30\/checkout\/version31\/index\/token_code\/.*/
 			);
 		});
